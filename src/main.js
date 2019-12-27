@@ -22,7 +22,7 @@ async function selectTextsFunction(selection) {
 }
 
 function digIntoGroup(node) {
-    if (node.constructor.name === "Group") {
+    if (node.constructor.name === "Group" || node.constructor.name === "Artboard") {
         node.children.forEach(function (childNode) {
             digIntoGroup(childNode);
         });
